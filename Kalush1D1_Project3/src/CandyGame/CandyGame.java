@@ -9,7 +9,11 @@ import java.util.Set;
 
 import java.util.HashSet;
 	
-
+/**
+ * 
+ * @author Dominic Kalush
+ *
+ */
 public class CandyGame {
 	 private static int[] totalStudents;
 
@@ -22,7 +26,14 @@ public class CandyGame {
 	        userScanner = new Scanner(System.in);
 
 	    }
-
+/**
+ * A method to get an integer from the user in the range from a lower limit to an upper limit
+inclusive. This method should receive the two limits as parameters. The integer returned
+from this method is the number of students playing the game.
+ * @param min
+ * @param max
+ * @return
+ */
 	    public int getStudentsNumber(int min, int max) {
 
 	        int randomNumber;
@@ -52,7 +63,18 @@ public class CandyGame {
 	        return randomNumber;
 
 	    }
+/**
+ * A method to get an even integer in the range from an even (i.e. not odd) lower limit to an
+even upper limit inclusive. Again, the upper and lower limits should be passed to this
 
+CSCI 235 Fall 2020
+
+method. (The lower and upper limits passed to the method are the limits for the lower even
+number which in this case are 4 and 10.)
+ * @param min
+ * @param max
+ * @return
+ */
 	    public int getRangeOfCandy(int min, int max) {
 
 	        int randomNumber;
@@ -88,7 +110,14 @@ public class CandyGame {
 	        return randomNumber;
 
 	    }
-
+/**
+ * A method that will distribute a number of pieces of candy to an array of integers
+(representing the students). The number given to each “student” must be random, even,
+and between two specified even limits inclusive. You will need to pass the lower and upper
+limits to this method.
+ * @param min
+ * @param max
+ */
 	    public void handOutCandies(int min, int max) {
 
 	        Random randomGenerator = new Random();
@@ -108,7 +137,9 @@ public class CandyGame {
 	        }
 
 	    }
-
+/**
+ * A method to print an array of integers on one line in a field width of size 4.
+ */
 	    public void printSizeOfClass() {
 
 	        for (int i = 0; i < totalStudents.length; i++) {
@@ -142,7 +173,12 @@ public class CandyGame {
 	        // myScanner.close();
 
 	    }
-
+/**
+ * A method that will pass the candy as described in the game. In essence, you are using an
+array to represent a circle. Portions (specifically half) of each element in the array are getting
+added to the element on the right, except for the last element, a portion of which gets
+added to the first.
+ */
 	    public void passCandy() {
 
 	        while (!testGame()) {
@@ -188,7 +224,11 @@ public class CandyGame {
 	        }
 
 	    }
-
+/**
+ * A method to test whether or not the game is over. It should return true if all values in the
+array are the same, otherwise, it should return false.
+ * @return
+ */
 	    public boolean testGame() {
 
 	        int temp  = totalStudents[0];

@@ -4,8 +4,10 @@
 package CandyGame;
 
 /**
- * @author domin
- *
+ * @author Dominic Kalush
+ *The main class which has the main method; this class should be called “Controller”. It should initiate
+an instance of the second class (CandyGame) and use that instance to call the methods in that class
+to perform the required actions to play the game.
  */
 public class Controller {
 
